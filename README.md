@@ -1,8 +1,8 @@
 # PowerShell4DFIR
 Repository for PowerShell Cmdlets used for Digital Forensics and Incident Response
 
-## Timestamps in UTC (PATH)
+## Timestamps in UTC
 Get-ChildItem \<PATH\> -Force | Select-Object FullName, CreationTimeUTC, LastAccessTimeUTC, LastWriteTimeUTC
   
 ## Timestamps in local time
-Get-ChildItem PATH> -Force | Select-Object FullName, CreationTime, LastAccessTime, LastWriteTime
+Get-ChildItem \<PATH\> -Force | Select-Object FullName, CreationTime, LastAccessTime, LastWriteTime
