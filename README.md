@@ -9,5 +9,7 @@ Get-ChildItem \<PATH\> -Force | Select-Object FullName, CreationTime, LastAccess
 
 ## Hash Values (MD5, SHA1, and SHA256)
 Get-FileHash \<PATH\> -Algorithm MD5 | Format-List
+
 Get-FileHash \<PATH\> -Algorithm SHA1 | Format-List
+
 Get-FileHash \<PATH\> -Algorithm SHA256 | Format-List
