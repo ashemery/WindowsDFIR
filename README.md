@@ -16,3 +16,7 @@ Get-FileHash \<PATH\> -Algorithm SHA256 | Format-List
 
 ## Merge two CSV files
 Get-Content LNK_User1.csv, LNK_User2.csv | Select-Object -Unique | Set-Content -Encoding ASCII LNK_Users.csv
+
+## Create Symbolic Links to Multiple files. Useful to process files that reside in Known Folders
+Check the file "createSymLinks.ps1" and from where it was found.
+More info about Known Folders: (URL)[https://docs.microsoft.com/en-us/windows/win32/shell/known-folders]
