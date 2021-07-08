@@ -1,5 +1,8 @@
-# PowerShell4DFIR
-Repository for PowerShell Cmdlets used for Digital Forensics and Incident Response
+# Windows DFIR
+Repository for different Windows DFIR related CMDs, CMDlets, etc
+
+# <strike>PowerShell4DFIR
+Repository for PowerShell Cmdlets used for Digital Forensics and Incident Response</strike>
 
 ## Timestamps in UTC
 Get-ChildItem \<PATH\> -Force | Select-Object FullName, CreationTimeUTC, LastAccessTimeUTC, LastWriteTimeUTC
