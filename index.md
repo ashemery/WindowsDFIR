@@ -1,37 +1,25 @@
-## Welcome to GitHub Pages
+# Windows DFIR
+Repository for different Windows DFIR related CMDs, PowerShell CMDlets, etc, plus workshops that I did for different conferences or events.
 
-You can use the [editor on GitHub](https://github.com/ashemery/WindowsDFIR/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+# <strike>PowerShell4DFIR
+Repository for PowerShell Cmdlets used for Digital Forensics and Incident Response</strike>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Timestamps in UTC
+Get-ChildItem \<PATH\> -Force | Select-Object FullName, CreationTimeUTC, LastAccessTimeUTC, LastWriteTimeUTC
+  
+## Timestamps in local time
+Get-ChildItem \<PATH\> -Force | Select-Object FullName, CreationTime, LastAccessTime, LastWriteTime
 
-### Markdown
+## Hash Values (MD5, SHA1, and SHA256)
+Get-FileHash \<PATH\> -Algorithm MD5 | Format-List
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Get-FileHash \<PATH\> -Algorithm SHA1 | Format-List
 
-```markdown
-Syntax highlighted code block
+Get-FileHash \<PATH\> -Algorithm SHA256 | Format-List
 
-# Header 1
-## Header 2
-### Header 3
+## Merge two CSV files
+Get-Content LNK_User1.csv, LNK_User2.csv | Select-Object -Unique | Set-Content -Encoding ASCII LNK_Users.csv
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ashemery/WindowsDFIR/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## Create Symbolic Links to Multiple files. Useful to process files that reside in Known Folders
+- Check the file "createSymLinks.ps1" and from where it was found.
+- More info about Known Folders: [URL](https://docs.microsoft.com/en-us/windows/win32/shell/known-folders)
