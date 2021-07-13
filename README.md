@@ -14,6 +14,9 @@ Repository for different Windows DFIR related CMDs, PowerShell CMDlets, etc, plu
 
 ```Get-FileHash \<PATH\> -Algorithm SHA256 | Format-List```
 
+### Find location of executable (in PATH)
+```where executablename```
+
 ### Merge two CSV files
 ```Get-Content LNK_User1.csv, LNK_User2.csv | Select-Object -Unique | Set-Content -Encoding ASCII LNK_Users.csv```
 
